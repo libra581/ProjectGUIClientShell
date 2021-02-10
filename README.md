@@ -47,6 +47,24 @@ void MainWindow::on_btn_connecting_clicked()
   thread->start();
 }
 ```
+Класс типа QApplication переобределяет виртуальный метод *notify* для эффективной обработки исключений:
+
+```C++
+virtual bool notify(QObject *receiver, QEvent *event) override
+{
+    try
+    {
+        return QApplication::notify(receiver, event);
+    }
+    catch (std::exception &e)
+    {
+        qCritical() << "Exception trown:" << e.what();
+    }
+
+    return false;
+}
+```
+
 
 ## Скриншоты интерфейса пользователя
 ![interface](https://i.pinimg.com/originals/dc/8a/58/dc8a589839389287007ed9eb34e97fe7.png "Интерфейс пользователя главного окна")
