@@ -47,7 +47,7 @@ void MainWindow::on_btn_connecting_clicked()
   thread->start();
 }
 ```
-Класс типа QApplication переобределяет виртуальный метод *notify* для эффективной обработки исключений:
+Класс типа QApplication переопределяет виртуальный метод *notify* для эффективной обработки исключений:
 
 ```C++
 virtual bool notify(QObject *receiver, QEvent *event) override
