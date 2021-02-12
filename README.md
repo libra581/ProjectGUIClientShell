@@ -65,6 +65,11 @@ virtual bool notify(QObject *receiver, QEvent *event) override
 }
 ```
 
-
 ## Скриншоты интерфейса пользователя
 ![interface](https://i.pinimg.com/originals/dc/8a/58/dc8a589839389287007ed9eb34e97fe7.png "Интерфейс пользователя главного окна")
+
+# Поддержка
+Если у вас возникли сложности или вопросы, создайте [обсуждение][1] в данном репозитории 
+или напишите на электронную почту libese581@gmail.com.
+
+[1]: https://github.com/libra581/ProjectGUIClientShell/issues
